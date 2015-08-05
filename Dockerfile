@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND         noninteractive
 RUN apt-get update && \
     apt-get install -y texlive-full
 
-RUN mkdir /code
+RUN adduser latex --shell /bin/bash
+RUN mkdir /code/ && chown latex: -R /code/
 
-WORKDIR /code
+USER latex
+WORKDIR /code/
