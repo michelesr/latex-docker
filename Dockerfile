@@ -1,4 +1,4 @@
-FROM debian:8
+FROM debian:12
 
 MAINTAINER Michele Sorcinelli "mikefender@cryptolab.net"
 
